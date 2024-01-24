@@ -27,4 +27,14 @@ public class UserDAOImpl implements UserDAO{
          return users.stream().filter(user -> user.getId() == id).findAny().orElse(null);
     }
 
+    @Override
+    public void deleteUserById(int id) {
+        users.remove(users.get(id-1));
+    }
+
+    @Override
+    public void updateUser(User user) {
+
+    }
+
 }
