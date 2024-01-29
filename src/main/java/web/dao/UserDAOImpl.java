@@ -62,4 +62,14 @@ public class UserDAOImpl implements UserDAO{
 //        users.add(user);
     }
 
+    @Override
+    public void deleteUserById(int id) {
+        users.remove(users.get(id-1));
+    }
+
+    @Override
+    public void updateUser(User user) {
+
+    }
+
 }
